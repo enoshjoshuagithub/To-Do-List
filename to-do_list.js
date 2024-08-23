@@ -19,6 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
             taskList.removeChild(listItem);
         });
 
+        function onMouseOver() {
+            deleteButton.style.backgroundColor = '#b55171';
+        }
+        
+        function onMouseOut() {
+            deleteButton.style.backgroundColor = '#cb4eed'; 
+        }
+
+        deleteButton.addEventListener('mouseover', onMouseOver);
+        deleteButton.addEventListener('mouseout', onMouseOut);
+
         listItem.appendChild(deleteButton);
 
         // Toggle task completion
